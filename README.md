@@ -7,3 +7,5 @@ Public sources were verified on 24 November 2026. Cohort eligibility, PGDM class
 The site consists of a self-contained index.html and is published from the root of the main branch using GitHub Pages. Checklist ticks stay in the visitor's browser. Cohort worksheet text is not saved or transmitted.
 
 Update index.html and push to main to publish a revision. Recheck APS and university instructions before each new cohort.
+
+The live header provides direct downloads of the detailed PDF SOP, editable Word document and one-page PDF flowchart. These files are served alongside index.html.
