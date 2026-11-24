@@ -5,7 +5,17 @@ html,body,#root{height:100%;margin:0;font-family:var(--font-family-body)}
 .brand-icon{color:var(--color-text-accent);background:var(--color-background-muted);border-radius:var(--radius-element);padding:var(--spacing-2)}
 .nav-progress{min-width:0}
 .eyebrow{letter-spacing:.08em;text-transform:uppercase}
-.overview-lead{max-width:72ch}
+.hero-grid{align-items:center}
+.hero-copy{justify-content:center;min-width:0}
+.illustration-figure{margin:0;min-width:0}
+.illustration-figure img{display:block;width:100%;height:auto;border-radius:var(--radius-container)}
+.hero-art img{aspect-ratio:3/2;object-fit:cover}
+.suggestion-result{border-inline-start:var(--spacing-1) solid var(--color-text-accent);padding-inline-start:var(--spacing-4)}
+.explorer-detail{justify-content:center;min-width:0}
+.step-preview{animation:preview-in .25s ease-out}
+.practice-feedback{border-block-start:var(--border-width) solid var(--color-border);padding-block-start:var(--spacing-4)}
+@keyframes preview-in{from{opacity:.45;transform:translateY(.3rem)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.step-preview{animation:none}}
 .content-wrap{min-width:0;width:100%}
 .flowchart{margin:0;overflow:auto;max-width:100%;border-radius:var(--radius-container);background:var(--color-background-surface)}
 .flowchart svg{display:block;width:100%;min-width:48rem;height:auto}

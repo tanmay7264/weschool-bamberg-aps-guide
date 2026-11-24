@@ -1,0 +1,19 @@
+{
+  "provider": "Built-in image_gen",
+  "higgsfield_attempt": "All three submissions rejected: Requires basic plan or higher. Zero jobs submitted.",
+  "purpose": "Illustrative artwork for the APS guide; not official documents, campus photos or actual applicants.",
+  "assets": [
+    {
+      "file": "bamberg-journey.webp",
+      "prompt": "Premium editorial 3D paper-cut miniature, warm ivory background, cobalt blue accents, soft coral and butter yellow, tactile matte paper, soft daylight shadows. No text, no logos, no watermarks, no official seals. Indian postgraduate students with backpacks in a Bamberg-inspired Bavarian riverside town, red roofs, half-timbered houses, bridge, spires and a paper airplane."
+    },
+    {
+      "file": "document-preparation.webp",
+      "prompt": "Premium editorial 3D paper-cut miniature, warm ivory background, cobalt blue accents, soft coral and butter yellow, tactile matte paper, soft daylight shadows. No text, no logos, no watermarks, no official seals. Organized desk: blue folder, blank paper, abstract checklist, pen, magnifier and simple closed booklet without national emblem."
+    },
+    {
+      "file": "university-teamwork.webp",
+      "prompt": "Premium editorial 3D paper-cut miniature, warm ivory background, cobalt blue accents, soft coral and butter yellow, tactile matte paper, soft daylight shadows. No text, no logos, no watermarks, no official seals. Indian postgraduate students and a university coordinator around a table with blank folders, laptop, globe and a miniature Bavarian building behind them."
+    }
+  ]
+}

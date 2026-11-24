@@ -24,3 +24,9 @@ Checklist progress uses the original browser-local storage key so the redesign p
 ## Content review
 
 Public sources were verified on 24 November 2026. Cohort eligibility, PGDM classification and group payment instructions need institutional confirmation, as explained in the guide. Recheck APS and university instructions before each new cohort. The interface redesign does not change the published SOP requirements.
+
+## Interactive learning features
+
+The overview has an illustrated three-chapter explorer, a route-aware next-action helper using the student’s saved checklist ticks, and three practice scenarios with immediate explanations. Run `npm run check` for suggestion branches and route gates. Route choices and practice answers are session-only; the existing checklist storage key is preserved.
+
+The three illustrations are AI-generated educational artwork, not photographs of a campus, official documents or real applicants. They were made with the built-in image generator after the requested Higgsfield generation was rejected because the connected account requires Basic or higher. Their prompts and provenance are in `app/media/illustration-prompts.json`.
