@@ -1,0 +1,19 @@
+{
+  "name": "exchange",
+  "like": "neutral",
+  "mode": "both",
+  "settings": [
+    {
+      "thing": "accent",
+      "value": "#2563eb",
+      "source": "dial"
+    },
+    {
+      "thing": "text-size",
+      "value": "16",
+      "source": "dial"
+    }
+  ],
+  "lifted": [],
+  "palette": "1b85c280155c1948f79a1bc1e51897cd55bd3b535aceac70b758a3bcf3ab9861"
+}

@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 690" role="img" aria-labelledby="flowtitle flowdesc">
+<title id="flowtitle">APS Process A responsibilities and flow</title><desc id="flowdesc">Selection goes to institutional route confirmation. A confirmed exemption goes to visa preparation. Otherwise nomination and group arrangements run together, then student documents, account, form and signing, followed by collective payment, dispatch, APS verification and Bamberg result confirmation. Missing documents and additional requests return to document preparation.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="var(--color-text-secondary)"/></marker></defs>
+<style>text{font-family:var(--font-family-body);fill:var(--color-text-primary)}.lane{fill:var(--color-background-muted)}.node{fill:var(--color-background-surface);stroke:var(--color-border-emphasized);stroke-width:1.4}.inst{fill:var(--color-background-surface);stroke:var(--color-accent)}.gate{fill:var(--color-background-muted);stroke:var(--color-text-warning)}.line{fill:none;stroke:var(--color-text-secondary);stroke-width:1.6;marker-end:url(#arrow)}.small{font-size:var(--text-supporting-size);fill:var(--color-text-secondary)}.label{font-size:var(--text-body-size);font-weight:600}.heading{font-size:var(--text-body-size);font-weight:700;letter-spacing:.06em}</style>
+<rect class="lane" x="10" y="51" width="220" height="593" rx="12"/>
+<text class="heading" x="120" y="31" text-anchor="middle">STUDENT</text>
+<rect class="lane" x="250" y="51" width="220" height="593" rx="12"/>
+<text class="heading" x="360" y="31" text-anchor="middle">WESCHOOL</text>
+<rect class="lane" x="490" y="51" width="220" height="593" rx="12"/>
+<text class="heading" x="600" y="31" text-anchor="middle">BAMBERG</text>
+<rect class="lane" x="730" y="51" width="220" height="593" rx="12"/>
+<text class="heading" x="840" y="31" text-anchor="middle">APS</text>
+<path class="line" d="M223 95H257"/>
+<path class="line" d="M473 95H497"/>
+<path class="line" d="M360 118V128H840V137"/>
+<path class="line" d="M600 128V137"/>
+<path class="line" d="M840 183V199H120V202"/>
+<path class="line" d="M120 248V267"/>
+<path class="line" d="M120 313V332"/>
+<path class="line" d="M120 378V397"/>
+<path class="line" d="M120 443V462"/>
+<path class="line" d="M223 485H257"/>
+<path class="line" d="M360 508V527"/>
+<path class="line" d="M463 550H737"/>
+<path class="line" d="M840 573V584H600V592"/>
+<path class="line" d="M497 615H223"/>
+<a href="#step-1" data-step="1" aria-label="Open step 1"><rect class="node" x="17" y="72" width="206" height="46" rx="8"/>
+<text class="label" x="120" y="92" text-anchor="middle">01 Keep selection</text>
+<text class="label" x="120" y="110" text-anchor="middle">and coordinator</text>
+</a>
+<a href="#step-2" data-step="2" aria-label="Open step 2"><rect class="gate" x="257" y="72" width="206" height="46" rx="8"/>
+<text class="label" x="360" y="92" text-anchor="middle">02 Confirm route</text>
+<text class="label" x="360" y="110" text-anchor="middle">with both institutions</text>
+</a>
+<g><rect class="gate" x="497" y="72" width="206" height="46" rx="8"/>
+<text class="label" x="600" y="92" text-anchor="middle">Confirmed exempt</text>
+<text class="label" x="600" y="110" text-anchor="middle">Keep proof → visa</text>
+</g>
+<a href="#step-3" data-step="3" aria-label="Open step 3"><rect class="inst" x="497" y="137" width="206" height="46" rx="8"/>
+<text class="label" x="600" y="157" text-anchor="middle">03 Nomination</text>
+<text class="label" x="600" y="175" text-anchor="middle">and host application</text>
+</a>
+<a href="#step-4" data-step="4" aria-label="Open step 4"><rect class="inst" x="737" y="137" width="206" height="46" rx="8"/>
+<text class="label" x="840" y="157" text-anchor="middle">04 Assign group</text>
+<text class="label" x="840" y="175" text-anchor="middle">number</text>
+</a>
+<a href="#step-5" data-step="5" aria-label="Open step 5"><rect class="node" x="17" y="202" width="206" height="46" rx="8"/>
+<text class="label" x="120" y="230" text-anchor="middle">05 Collect records</text>
+</a>
+<a href="#step-6" data-step="6" aria-label="Open step 6"><rect class="node" x="17" y="267" width="206" height="46" rx="8"/>
+<text class="label" x="120" y="295" text-anchor="middle">06 Check all details</text>
+</a>
+<a href="#step-7" data-step="7" aria-label="Open step 7"><rect class="node" x="17" y="332" width="206" height="46" rx="8"/>
+<text class="label" x="120" y="360" text-anchor="middle">07 Create account</text>
+</a>
+<a href="#step-8" data-step="8" aria-label="Open step 8"><rect class="node" x="17" y="397" width="206" height="46" rx="8"/>
+<text class="label" x="120" y="425" text-anchor="middle">08 Complete form</text>
+</a>
+<a href="#step-9" data-step="9" aria-label="Open step 9"><rect class="node" x="17" y="462" width="206" height="46" rx="8"/>
+<text class="label" x="120" y="490" text-anchor="middle">09 Print and sign</text>
+</a>
+<a href="#step-10" data-step="10" aria-label="Open step 10"><rect class="inst" x="257" y="462" width="206" height="46" rx="8"/>
+<text class="label" x="360" y="482" text-anchor="middle">10 Coordinate one</text>
+<text class="label" x="360" y="500" text-anchor="middle">group fee transfer</text>
+</a>
+<a href="#step-11" data-step="11" aria-label="Open step 11"><rect class="inst" x="257" y="527" width="206" height="46" rx="8"/>
+<text class="label" x="360" y="547" text-anchor="middle">11 Submit all</text>
+<text class="label" x="360" y="565" text-anchor="middle">packets together</text>
+</a>
+<g><rect class="inst" x="737" y="527" width="206" height="46" rx="8"/>
+<text class="label" x="840" y="547" text-anchor="middle">Verify academic</text>
+<text class="label" x="840" y="565" text-anchor="middle">records</text>
+</g>
+<a href="#step-12" data-step="12" aria-label="Open step 12"><rect class="inst" x="497" y="592" width="206" height="46" rx="8"/>
+<text class="label" x="600" y="612" text-anchor="middle">12 Receive result</text>
+<text class="label" x="600" y="630" text-anchor="middle">Confirm to student</text>
+</a>
+<g><rect class="node" x="17" y="592" width="206" height="46" rx="8"/>
+<text class="label" x="120" y="612" text-anchor="middle">Prepare visa with</text>
+<text class="label" x="120" y="630" text-anchor="middle">confirmed evidence</text>
+</g>
+<text class="small" x="840" y="88" text-anchor="middle">Exemption must be confirmed.</text>
+<text class="small" x="840" y="106" text-anchor="middle">Do not register or pay on that path.</text>
+<text class="small" x="360" y="151" text-anchor="middle">Process A confirmed</text>
+<text class="small" x="360" y="175" text-anchor="middle">Nomination and group setup</text>
+<text class="small" x="360" y="192" text-anchor="middle">can run in parallel.</text>
+<text class="small" x="480" y="232" text-anchor="middle">Missing or inconsistent records → return to 05 and 06.</text>
+<text class="small" x="480" y="294" text-anchor="middle">Unclear PGDM entry or required field → ask coordinator.</text>
+<text class="small" x="480" y="359" text-anchor="middle">Unconfirmed individual payment → pause and ask.</text>
+<text class="small" x="480" y="424" text-anchor="middle">Group result goes to Bamberg; no individual certificate.</text>
+<text class="small" x="610" y="536" text-anchor="middle">Group packet</text>
+<text class="small" x="480" y="670" text-anchor="middle">Additional APS documents requested → return to 05 and 06, then respond through the specified channel.</text>
+</svg>
