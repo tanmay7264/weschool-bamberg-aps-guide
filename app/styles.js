@@ -24,12 +24,21 @@ html,body,#root{height:100%;margin:0;font-family:var(--font-family-body)}
 .source-links{overflow-wrap:anywhere}
 .download-file{color:var(--color-text-secondary);background:var(--color-background-muted);padding:var(--spacing-3);border-radius:var(--radius-element)}
 .nav-footer{border-top:var(--border-width) solid var(--color-border)}
+.tour-overlay{position:fixed;inset:0;margin:0;border:0;padding:0;width:100vw;height:100dvh;max-width:none;max-height:none;background:transparent;color:var(--color-text-primary);overflow:hidden}
+.tour-overlay::backdrop{background:transparent}
+.tour-spotlight{position:absolute;inset:0;pointer-events:none}
+.tour-shade{fill:var(--color-overlay)}
+.tour-outline{fill:none;stroke:var(--color-text-accent);stroke-width:3}
+.tour-panel #tour-heading:focus{outline:none}
+.tour-pointer{fill:none;stroke:var(--color-text-accent);stroke-width:3;stroke-linecap:round}
+.tour-panel{position:absolute;bottom:auto;left:var(--spacing-3);top:var(--spacing-3);width:min(27rem,calc(100vw - 1.5rem));max-height:calc(100dvh - 1.5rem);overflow:auto;background:var(--color-background-surface);color:var(--color-text-primary);border:var(--border-width) solid var(--color-border);border-radius:var(--radius-container);box-shadow:var(--shadow-high)}
+[data-tour],.hero-copy,.map-inspector,.step-line > :first-child,[aria-labelledby="next-action-title"],[aria-labelledby="practice-title"]{scroll-margin-top:var(--spacing-4)}
 .print-only{display:none}
 @media(max-width:48rem){.desktop-label{display:none}.flowchart svg{min-width:48rem}}
 @media print{
  @page{size:letter;margin:16mm}
  html,body,#root{color-scheme:light!important;height:auto!important;overflow:visible!important;background:var(--color-background-surface)}
- .screen-shell{display:none!important}.print-only{display:flex!important;padding:0!important}
+ .tour-overlay{display:none!important}.screen-shell{display:none!important}.print-only{display:flex!important;padding:0!important}
  .print-step{break-before:page}.print-only h1,.print-only h2,.print-only h3{break-after:avoid}
  .print-only p,.print-only li{orphans:3;widows:3}.print-only a{overflow-wrap:anywhere}
 }

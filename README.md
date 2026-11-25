@@ -39,7 +39,7 @@ The graph keeps the confirmed exemption exit, parallel university tasks and the 
 
 ## Appearance, quick tour and credits
 
-The sun/moon action switches the full Astryx theme, including the navbar, sidebar, controls and map. The preference uses `aps-guide-appearance-v1`, separate from checklist storage. Quick tour offers six short explanations with Back, Next, Finish and Show me actions; it is available in the navbar and overview.
+The sun/moon action switches the full Astryx theme, including the navbar, sidebar, controls and map. The preference uses `aps-guide-appearance-v1`, separate from checklist storage. Quick tour starts automatically on the first visit and spotlights fifteen features across all nine guide sections, with anchored explanations and Back, Next, Skip, Finish and try-this-section actions. Dismissal or completion is remembered with `aps-guide-quick-tour-v2`; the navbar and overview can replay it anytime. A native modal keeps keyboard focus inside the tour, Escape dismisses it, and the highlighted target and panel reposition on scrolling or resizing. Phone layouts use the active step list when the 3D map is not shown.
 
 Website and print credits name Tanmay Narnaware. Both downloadable PDFs carry the same footer credit on every page and in author metadata. The original page counts, instructions and sources are retained. The standalone map and SOP page 2 now use the same graph as the website.
 

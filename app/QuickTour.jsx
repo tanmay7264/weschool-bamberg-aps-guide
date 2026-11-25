@@ -1,33 +1,61 @@
-import React,{useState} from 'react';
-import {Dialog,DialogHeader} from '@astryxdesign/core/Dialog';
+import React,{useEffect,useLayoutEffect,useRef,useState} from 'react';
+import {DialogHeader} from '@astryxdesign/core/Dialog';
 import {VStack,HStack} from '@astryxdesign/core/Stack';
 import {Heading} from '@astryxdesign/core/Heading';
 import {Text} from '@astryxdesign/core/Text';
 import {Button} from '@astryxdesign/core/Button';
-import {Card} from '@astryxdesign/core/Card';
-import {Icon} from '@astryxdesign/core/Icon';
 import {ProgressBar} from '@astryxdesign/core/ProgressBar';
-import {CubeIcon,SparklesIcon,ClipboardDocumentCheckIcon,ArrowDownTrayIcon,SunIcon,AcademicCapIcon} from '@heroicons/react/24/outline';
+import {lessons} from './tour-model.js';
 
-const lessons=[
-  {title:'Welcome to your exchange guide',icon:AcademicCapIcon,view:'overview',text:'Start by confirming your cohort’s APS route with WeSchool and Bamberg. The guide helps you prepare; your institutions confirm eligibility, procedure and the result.',hint:'Your preparation ticks are personal reminders, not APS approval.'},
-  {title:'Explore the animated flowchart',icon:CubeIcon,view:'flowchart',text:'Select any raised tile to see who is responsible and what you need to do. Play walkthrough moves through the twelve steps. Use Flat view, zoom, or Step list whenever that is clearer.',hint:'The exemption exit, parallel university tasks and additional-records loop are shown explicitly.'},
-  {title:'Find your next action',icon:SparklesIcon,view:'overview',target:'next-action-title',text:'Choose your confirmed route and the task you are working on. The next-action helper combines your choices with saved checklist ticks to suggest the right guidance.',hint:'If the route is unconfirmed, the helper keeps institutional confirmation first.'},
-  {title:'Keep your documents organized',icon:ClipboardDocumentCheckIcon,view:'documents',text:'Use the thirteen document checks and the twelve preparation steps as you gather and review records. Your ticks stay in this browser after a reload.',hint:'Use the same device to continue. Reset checklist progress clears ticks; it does not change an APS application.'},
-  {title:'Save a copy for later',icon:ArrowDownTrayIcon,view:'downloads',text:'Download the detailed PDF SOP, editable Word document, or one-page flowchart. Recheck the official sources before using the guide with a new cohort.',hint:'The downloaded PDFs include the credit: Created by Tanmay Narnaware.'},
-  {title:'Make the guide comfortable',icon:SunIcon,view:'flowchart',text:'Use the sun or moon in the top bar to switch light and dark appearance. The navbar, sidebar and flowchart change together, and your choice is saved in this browser.',hint:'Reduced-motion preferences are respected. You can also pause map motion and replay this quick tour anytime.'},
-];
-
-export default function QuickTour({isOpen,onOpenChange,navigate}) {
-  const [index,setIndex]=useState(0);
+export default function QuickTour({onClose,navigate}) {
+  const [index,setIndex]=useState(0),[geometry,setGeometry]=useState(null);
+  const dialog=useRef(null),panel=useRef(null),heading=useRef(null),navigateRef=useRef(navigate);
+  navigateRef.current=navigate;
   const lesson=lessons[index];
-  function close(){onOpenChange(false);setIndex(0);}
-  function show(){navigate(lesson.view);close();if(lesson.target)requestAnimationFrame(()=>document.getElementById(lesson.target)?.scrollIntoView({block:'start',behavior:'auto'}));}
-  return <Dialog isOpen={isOpen} onOpenChange={open=>open?onOpenChange(true):close()} width="min(36rem, calc(100vw - 2rem))" maxHeight="85dvh" padding={6} purpose="info">
-    <VStack gap={5}><DialogHeader title="A quick tour of the guide" subtitle="Six short stops. Explore at your own pace." onOpenChange={open=>{if(!open)close();}}/>
-      <ProgressBar label="Quick tour progress" value={index+1} max={lessons.length} hasValueLabel formatValueLabel={(v,m)=>`${v} of ${m}`}/>
-      <VStack gap={4} aria-live="polite" aria-atomic="true"><HStack gap={3} vAlign="center"><Icon icon={lesson.icon} color="accent" size="lg"/><Text type="label" color="accent">STOP {index+1} OF {lessons.length}</Text></HStack><Heading level={3}>{lesson.title}</Heading><Text as="p" display="block">{lesson.text}</Text><Card variant="muted" padding={4}><Text as="p" display="block" color="secondary">{lesson.hint}</Text></Card></VStack>
-      <HStack gap={2} wrap="wrap" hAlign="between"><Button label="Show me this feature" variant="ghost" onClick={show}/><HStack gap={2}><Button label="Back in tour" isDisabled={index===0} onClick={()=>setIndex(n=>n-1)}/><Button label={index===lessons.length-1?'Finish tour':'Next in tour'} variant="primary" onClick={()=>index===lessons.length-1?close():setIndex(n=>n+1)}/></HStack></HStack>
+  useEffect(()=>{const previous=document.activeElement;dialog.current.showModal();return()=>{dialog.current?.close();if(previous?.isConnected)previous.focus();};},[]);
+  useLayoutEffect(()=>{
+    navigateRef.current(lesson.view,1);
+    setGeometry(null);
+    let frame;
+    function measure(){
+      const target=document.querySelector(lesson.target);
+      if(!target||!panel.current)return;
+      const r=target.getBoundingClientRect(),p=panel.current.getBoundingClientRect(),w=innerWidth,h=innerHeight;
+      const gap=16,inset=12,panelX=Math.max(inset,Math.min(r.left,w-p.width-inset));
+      let maxHeight=Math.min(panel.current.scrollHeight+2,h-inset*2),panelY=r.bottom+gap;
+      if(panelY+maxHeight>h-inset){
+        if(r.top-gap-maxHeight>=inset)panelY=r.top-gap-maxHeight;
+        else if(r.top>h/2){maxHeight=Math.max(100,r.top-gap-inset);panelY=inset;}
+        else{panelY=r.top+Math.min(r.height,120)+gap;maxHeight=Math.max(100,h-inset-panelY);}
+      }
+      panelY=Math.max(inset,Math.min(panelY,h-inset-maxHeight));
+      const left=Math.max(inset,r.left-6),top=Math.max(inset,r.top-6,panelY<r.top?panelY+maxHeight+gap:inset);
+      const bottom=Math.min(h-inset,r.bottom+6,panelY>r.top?panelY-gap:h-inset);
+      setGeometry({left,top,width:Math.max(0,Math.min(w-inset,r.right+6)-left),height:Math.max(0,bottom-top),panelX,panelY,maxHeight});
+    }
+    frame=requestAnimationFrame(()=>{
+      document.querySelector(lesson.target)?.scrollIntoView({block:'start',inline:'nearest',behavior:'instant'});
+      panel.current?.scrollTo({top:0,behavior:'instant'});
+      measure();heading.current?.focus({preventScroll:true});
+    });
+    const observer=new ResizeObserver(measure);if(panel.current)observer.observe(panel.current);
+    window.addEventListener('resize',measure);window.addEventListener('scroll',measure,true);
+    return()=>{cancelAnimationFrame(frame);observer.disconnect();window.removeEventListener('resize',measure);window.removeEventListener('scroll',measure,true);};
+  },[lesson]);
+  return <dialog ref={dialog} className="tour-overlay" aria-labelledby="tour-heading" onCancel={e=>{e.preventDefault();onClose();}}>
+    <svg className="tour-spotlight" width="100%" height="100%" aria-hidden="true">
+      <defs><mask id="tour-hole"><rect width="100%" height="100%" fill="white"/>{geometry&&<rect x={geometry.left} y={geometry.top} width={geometry.width} height={geometry.height} rx="12" fill="black"/>}</mask></defs>
+      <rect width="100%" height="100%" className="tour-shade" mask="url(#tour-hole)"/>
+      {geometry&&<><rect x={geometry.left} y={geometry.top} width={geometry.width} height={geometry.height} rx="12" className="tour-outline"/><path className="tour-pointer" d={`M ${geometry.left+Math.min(geometry.width/2,40)} ${geometry.panelY>geometry.top?geometry.top+geometry.height:geometry.top} L ${geometry.panelX+40} ${geometry.panelY>geometry.top?geometry.panelY:geometry.panelY+(panel.current?.offsetHeight||0)}`}/></>}
+    </svg>
+    <VStack ref={panel} className="tour-panel" padding={5} gap={4} style={geometry?{left:geometry.panelX,top:geometry.panelY,maxHeight:geometry.maxHeight}:undefined}>
+        <VStack gap={4}>
+          <DialogHeader title="Your guide, explained" subtitle={`Stop ${index+1} of ${lessons.length} · Follow the highlighted feature`} onOpenChange={open=>{if(!open)onClose();}}/>
+          <ProgressBar label="Quick tour progress" value={index+1} max={lessons.length}/>
+          <VStack gap={3} aria-live="polite" aria-atomic="true"><Heading level={3} id="tour-heading" tabIndex={-1} ref={heading}>{lesson.title}</Heading><Text as="p" display="block">{lesson.text}</Text><Text as="p" display="block" type="supporting" color="secondary">{lesson.hint}</Text></VStack>
+          <HStack gap={2} wrap="wrap" hAlign="between"><Button label="Skip tour" variant="ghost" size="sm" onClick={onClose}/><HStack gap={2}><Button label="Back in tour" size="sm" isDisabled={index===0} onClick={()=>setIndex(n=>n-1)}/><Button label={index===lessons.length-1?'Finish tour':'Next in tour'} size="sm" variant="primary" onClick={()=>index===lessons.length-1?onClose():setIndex(n=>n+1)}/></HStack></HStack>
+          <Button label="Close tour and try this section" variant="ghost" size="sm" onClick={onClose}/>
+        </VStack>
     </VStack>
-  </Dialog>;
+  </dialog>;
 }

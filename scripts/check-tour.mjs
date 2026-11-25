@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {lessons,TOUR_KEY,shouldShowTour,rememberTour} from '../app/tour-model.js';
+const values=new Map();
+const storage={getItem:key=>values.get(key)||null,setItem:(key,value)=>values.set(key,value)};
+assert.equal(shouldShowTour(storage),true,'First visits start the tour');
+rememberTour(storage);
+assert.equal(values.get(TOUR_KEY),'seen');
+assert.equal(shouldShowTour(storage),false,'Dismissed or finished tours stay dismissed');
+assert.equal(values.size,1,'Tour preferences must not change checklist or theme storage');
+const blocked={getItem(){throw Error('blocked');},setItem(){throw Error('blocked');}};
+assert.equal(shouldShowTour(blocked),true);assert.doesNotThrow(()=>rememberTour(blocked));
+for(const view of ['overview','flowchart','journey','documents','form','downloads','help','cohort','sources'])assert(lessons.some(l=>l.view===view),`Missing section ${view}`);
+assert(lessons.every(l=>l.target&&l.title&&l.text&&l.hint));
+console.log('First visit, remembered dismissal, blocked storage and tour section coverage passed.');

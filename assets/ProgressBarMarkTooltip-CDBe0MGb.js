@@ -1,1 +1,0 @@
-import{s as e}from"./index-DqU0Udxx.js";import{mt as t}from"./scrollView-BHXzp45q.js";var n=t();function r({content:t,children:r}){return(0,n.jsx)(e,{content:t,placement:`above`,focusTrigger:`always`,children:r})}export{r as default};
