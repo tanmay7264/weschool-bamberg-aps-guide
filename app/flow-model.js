@@ -4,13 +4,13 @@ export const flowNodes=[
   {n:3,x:554,y:154,title:['Nomination','& admission'],owner:'Student + universities',chapter:1},
   {n:4,x:814,y:154,title:['Group','instructions'],owner:'Universities + APS',chapter:1},
   {n:5,x:814,y:386,title:['Gather','your documents'],owner:'Student',chapter:2},
-  {n:6,x:554,y:386,title:['Quality-check','every record'],owner:'Student + WeSchool',chapter:2},
+  {n:6,x:554,y:386,title:['Quality-check','every record'],owner:'Student + home office',chapter:2},
   {n:7,x:294,y:386,title:['Create','your account'],owner:'Student',chapter:2},
   {n:8,x:34,y:386,title:['Complete','the APS form'],owner:'Student',chapter:2},
   {n:9,x:34,y:632,title:['Review, print','& sign'],owner:'Student',chapter:2},
   {n:10,x:294,y:632,title:['Coordinate','group payment'],owner:'Group payer',chapter:3},
   {n:11,x:554,y:632,title:['Submit the','group packet'],owner:'Student + universities',chapter:3},
-  {n:12,x:814,y:632,title:['Verification','& result'],owner:'APS + Bamberg',chapter:3},
+  {n:12,x:814,y:632,title:['Verification','& result'],owner:'APS + host university',chapter:3},
 ];
 
 // The two university tasks are parallel, and both feed the preparation path.

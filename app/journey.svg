@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 690" role="img" aria-labelledby="flowtitle flowdesc">
-<title id="flowtitle">APS Process A responsibilities and flow</title><desc id="flowdesc">Selection goes to institutional route confirmation. A confirmed exemption goes to visa preparation. Otherwise nomination and group arrangements run together, then student documents, account, form and signing, followed by collective payment, dispatch, APS verification and Bamberg result confirmation. Missing documents and additional requests return to document preparation.</desc>
+<title id="flowtitle">APS Process A responsibilities and flow</title><desc id="flowdesc">Selection goes to institutional route confirmation. A confirmed exemption goes to visa preparation. Otherwise nomination and group arrangements run together, then student documents, account, form and signing, followed by collective payment, dispatch, APS verification and the German host university result confirmation. Missing documents and additional requests return to document preparation.</desc>
 <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="var(--color-text-secondary)"/></marker></defs>
 <style>text{font-family:var(--font-family-body);fill:var(--color-text-primary)}.lane{fill:var(--color-background-muted)}.node{fill:var(--color-background-surface);stroke:var(--color-border-emphasized);stroke-width:1.4}.inst{fill:var(--color-background-surface);stroke:var(--color-accent)}.gate{fill:var(--color-background-muted);stroke:var(--color-text-warning)}.line{fill:none;stroke:var(--color-text-secondary);stroke-width:1.6;marker-end:url(#arrow)}.small{font-size:var(--text-supporting-size);fill:var(--color-text-secondary)}.label{font-size:var(--text-body-size);font-weight:600}.heading{font-size:var(--text-body-size);font-weight:700;letter-spacing:.06em}</style>
 <rect class="lane" x="10" y="51" width="220" height="593" rx="12"/>
 <text class="heading" x="120" y="31" text-anchor="middle">STUDENT</text>
 <rect class="lane" x="250" y="51" width="220" height="593" rx="12"/>
-<text class="heading" x="360" y="31" text-anchor="middle">WESCHOOL</text>
+<text class="heading" x="360" y="31" text-anchor="middle">HOME INSTITUTION</text>
 <rect class="lane" x="490" y="51" width="220" height="593" rx="12"/>
-<text class="heading" x="600" y="31" text-anchor="middle">BAMBERG</text>
+<text class="heading" x="600" y="31" text-anchor="middle">GERMAN HOST</text>
 <rect class="lane" x="730" y="51" width="220" height="593" rx="12"/>
 <text class="heading" x="840" y="31" text-anchor="middle">APS</text>
 <path class="line" d="M223 95H257"/>
@@ -87,7 +87,7 @@
 <text class="small" x="480" y="232" text-anchor="middle">Missing or inconsistent records → return to 05 and 06.</text>
 <text class="small" x="480" y="294" text-anchor="middle">Unclear PGDM entry or required field → ask coordinator.</text>
 <text class="small" x="480" y="359" text-anchor="middle">Unconfirmed individual payment → pause and ask.</text>
-<text class="small" x="480" y="424" text-anchor="middle">Group result goes to Bamberg; no individual certificate.</text>
+<text class="small" x="480" y="424" text-anchor="middle">Group result goes to the German host university; no individual certificate.</text>
 <text class="small" x="610" y="536" text-anchor="middle">Group packet</text>
 <text class="small" x="480" y="670" text-anchor="middle">Additional APS documents requested → return to 05 and 06, then respond through the specified channel.</text>
 </svg>

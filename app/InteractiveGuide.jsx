@@ -13,7 +13,7 @@ import {Link} from '@astryxdesign/core/Link';
 import {ArrowRightIcon,SparklesIcon,LightBulbIcon} from '@heroicons/react/24/outline';
 import data from './content.json';
 import {suggestNext,taskOptions,practiceQuestions} from './suggestions.js';
-import journeyImage from './media/bamberg-journey.webp';
+import journeyImage from './media/germany-journey.webp';
 import documentImage from './media/document-preparation.webp';
 import teamImage from './media/university-teamwork.webp';
 
@@ -28,13 +28,13 @@ export function HeroIntro({checks,openStep,navigate,onTour}) {
   const done=data.stages.filter(s=>checks['step-'+s.n]===true).length;
   return <Grid columns={{minWidth:300,max:2}} gap={6} className="hero-grid">
     <VStack gap={4} className="hero-copy">
-      <Text type="label" color="accent" className="eyebrow">WESCHOOL → BAMBERG</Text>
+      <Text type="label" color="accent" className="eyebrow">STUDENT EXCHANGE → GERMANY</Text>
       <Heading level={1} type="display-3" id="page-title">Your exchange.<br/>One clear next step.</Heading>
       <P type="large" color="secondary">A little preparation today. A new chapter in Germany tomorrow. Explore your APS journey, find your next action, and keep everything in order.</P>
       <HStack gap={3} wrap="wrap"><Button variant="primary" label="Explore the 3D flowchart" onClick={()=>navigate('flowchart')} endContent={<Icon icon={ArrowRightIcon}/>} /><Button label={done?'Continue my preparation':'Start with step 1'} onClick={()=>openStep(data.stages.find(s=>!checks['step-'+s.n])?.n||12)} /></HStack>
       <HStack><Button label="Take the quick tour" variant="ghost" onClick={onTour}/></HStack><HStack gap={4} wrap="wrap"><Text type="supporting" color="secondary">12 guided steps</Text><Text type="supporting" color="secondary">13 document checks</Text><Text type="supporting" color="secondary">Made for future cohorts</Text></HStack>
     </VStack>
-    <VStack as="figure" gap={2} className="illustration-figure hero-art"><img src={journeyImage} alt="Paper-cut illustration of Indian students exploring a Bamberg-inspired riverside town" width="1280" height="853" fetchPriority="high"/><Text as="figcaption" type="supporting" color="secondary">Your next chapter, illustrated. Artwork is illustrative, not a campus photograph.</Text></VStack>
+    <VStack as="figure" gap={2} className="illustration-figure hero-art"><img src={journeyImage} alt="Paper-cut illustration of Indian students exploring a German riverside town" width="1280" height="853" fetchPriority="high"/><Text as="figcaption" type="supporting" color="secondary">Your next chapter, illustrated. Artwork is illustrative, not a campus photograph.</Text></VStack>
   </Grid>;
 }
 

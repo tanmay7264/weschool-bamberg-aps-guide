@@ -35,7 +35,7 @@ def render(page_number=None):
     c.drawString(36, 581, 'Your APS journey, mapped.')
     c.setFont('Helvetica', 8.5)
     c.setFillColor(MUTED)
-    c.drawString(36, 564, 'APS Process A | WeSchool to Bamberg | Printable version of the interactive journey map')
+    c.drawString(36, 564, 'Germany Student Exchange | APS Process A | Printable version of the interactive journey map')
     c.setFont('Helvetica-Bold', 8)
     c.setFillColor(BLUE)
     c.drawRightString(756, 584, '12 STEPS / 3 CHAPTERS')
@@ -180,10 +180,11 @@ writer.add_metadata({'/Author': 'Tanmay Narnaware', '/FlowModelSHA256': fingerpr
 updated = BUILD / sop.name
 writer.write(updated)
 result = PdfReader(updated)
-assert len(result.pages) == len(original.pages) == 19
+assert len(result.pages) == len(original.pages)
+assert len(result.pages) >= 3
 assert 'Your APS journey, mapped.' in result.pages[1].extract_text()
 assert 'The Process A journey' not in result.pages[1].extract_text()
-for i in range(19):
+for i in range(len(original.pages)):
     if i != 1:
         assert result.pages[i].extract_text() == original.pages[i].extract_text()
 assert all('Created by Tanmay Narnaware' in p.extract_text() for p in result.pages)

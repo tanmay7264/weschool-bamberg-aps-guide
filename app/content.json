@@ -1,14 +1,15 @@
 {
-  "title": "APS guide for WeSchool to Bamberg exchange students",
+  "title": "APS guide for student exchanges in Germany",
   "verified": "24 November 2026",
   "intro": [
-    "You have been selected for a WeSchool exchange at the University of Bamberg. Start by confirming with your international office whether APS group verification is required for your cohort. If Process A is confirmed, you register individually, while the universities arrange the group and coordinate payment and submission.",
-    "This guide covers a short-term exchange in which you remain enrolled at your home institution and do not receive a German degree. APS verifies academic records; it does not grant university admission or issue a visa. Your WeSchool selection, Bamberg admission and visa application are separate milestones.",
-    "Use the numbered journey in order. Documents can be gathered while the institutions arrange the group. Follow the confirmed cohort instructions at registration and payment checkpoints. Mark a step complete only after you have the evidence described in that step."
+    "You have been selected for a student exchange in Germany. Start by confirming with your home institution and German host university whether APS group verification is required for your cohort. If Process A is confirmed, you register individually, while the institutions arrange the group and coordinate payment and submission.",
+    "This guide is for students with Indian academic records joining a short-term institutional exchange in Germany, remaining enrolled at their Indian home institution and receiving no German degree. It is not a universal APS route for every nationality, degree programme or exchange. APS verification, home-institution selection, host admission and the visa application are separate milestones.",
+    "Use the numbered journey in order. Documents can be gathered while the institutions arrange the group. Follow the confirmed cohort instructions at registration and payment checkpoints. Mark a step complete only after you have the evidence described in that step.",
+    "Generalised for Germany student exchanges on 25 November 2026. The Process A instructions apply only when confirmed for your cohort. Obtain university-specific deadlines, portal details and admission requirements from your German host university."
   ],
   "gate": [
-    "Ask WeSchool and Bamberg to confirm in writing whether this cohort needs Process A group verification, qualifies for an exemption, or must follow another route. The German Missions visa page lists an APS-certificate exemption for non-German-degree studies. APS also publishes Process A for institutional exchanges. These statements concern related but different requirements; neither is permission to assume the cohort route.",
-    "If the institutions confirm that no APS procedure is needed, retain their instruction and the relevant exemption evidence and continue with Bamberg admission and the applicable visa process. Stop the APS registration and payment path.",
+    "Ask your home institution and the German host university to confirm in writing whether this cohort needs Process A group verification, qualifies for an exemption, or must follow another route. The German Missions visa page lists an APS-certificate exemption for non-German-degree studies. APS also publishes Process A for institutional exchanges. These statements concern related but different requirements; neither is permission to assume the cohort route.",
+    "If the institutions confirm that no APS procedure is needed, retain their instruction and the relevant exemption evidence and continue with host-university admission and the applicable visa process. Stop the APS registration and payment path.",
     "If Process A applies, obtain the group instructions and use this guide. If there is a German degree, a double degree, an uncertain qualification category, an existing APS account, or an earlier refusal, ask for case-specific instructions before registering or paying. Do not create a duplicate account to resolve uncertainty."
   ],
   "stages": [
@@ -23,19 +24,19 @@
       ],
       "purpose": "Turn your selection into a clear set of next actions and a record you can refer to throughout the exchange.",
       "actions": [
-        "Save the WeSchool selection or nomination email. Note the host university, intended exchange semester, approximate stay and the programme in which you remain enrolled.",
-        "Identify the WeSchool international office contact and ask who coordinates the APS group. Record an official email address, the student handover deadline and how the office wants documents delivered.",
+        "Save your home institution selection or nomination email. Note the host university, intended exchange semester, approximate stay and the programme in which you remain enrolled.",
+        "Identify your home institution international office contact and ask who coordinates the APS group. Record an official email address, the student handover deadline and how the office wants documents delivered.",
         "Create a private exchange folder with separate areas for identity records, education records, APS registration, payment evidence and university correspondence. Keep originals secure and prepare working copies.",
         "Check that your passport details are available and accurate. If a passport is missing, expiring or being renewed, tell the coordinator early and ask how that affects nomination and APS registration."
       ],
-      "check": "Selection is not Bamberg admission. Do not describe yourself as admitted until Bamberg issues its admission letter. Do not invent travel dates or use an old cohort deadline.",
+      "check": "Selection is not host-university admission. Do not describe yourself as admitted until the German host university issues its admission letter. Do not invent travel dates or use an old cohort deadline.",
       "complete": "You have the selection record, the correct coordinator and a list of the next university deadlines.",
-      "branch": "If the host, semester or programme is incorrect, resolve it with WeSchool before entering the details into any application."
+      "branch": "If the host, semester or programme is incorrect, resolve it with your home institution before entering the details into any application."
     },
     {
       "n": 2,
       "title": "Confirm whether APS Process A applies",
-      "owner": "WeSchool + Bamberg",
+      "owner": "Home institution + German host university",
       "short": "Confirm the route",
       "sources": [
         "S1",
@@ -44,8 +45,8 @@
       ],
       "purpose": "Establish the correct procedure before you create a registration or incur a fee.",
       "actions": [
-        "Ask the coordinator to confirm that you are part of a recognised institutional exchange, remain enrolled at WeSchool and will not receive a German degree. The published Process A leaflet describes bachelor or master enrolment at the Indian partner institution.",
-        "For a PGDM or another diploma, ask WeSchool and Bamberg to confirm that the qualification and cohort are accepted for Process A and how the qualification must be entered on the APS form. Write the actual award title; do not relabel a diploma as a master's degree.",
+        "Ask the coordinator to confirm that you are part of a recognised institutional exchange, remain enrolled at your home institution and will not receive a German degree. The published Process A leaflet describes bachelor or master enrolment at the Indian partner institution.",
+        "For a PGDM or another diploma, ask your home institution and the German host university to confirm that the qualification and cohort are accepted for Process A and how the qualification must be entered on the APS form. Write the actual award title; do not relabel a diploma as a master's degree.",
         "Ask whether the non-German-degree visa certificate exemption or a qualifying publicly funded scholarship applies to you. The Process A leaflet describes European publicly funded awards meeting the current monthly BAfoeG threshold. Ask the offices to confirm the current applicable conditions for your award; having any scholarship is not enough.",
         "If you already registered, paid or received an APS result, give the coordinator the existing reference privately and request instructions. The leaflet excludes candidates previously refused in the individual procedure because of fraudulent documents."
       ],
@@ -55,27 +56,27 @@
     },
     {
       "n": 3,
-      "title": "Complete the Bamberg exchange application",
-      "owner": "Student + WeSchool + Bamberg",
+      "title": "Complete your German host university’s exchange application",
+      "owner": "Student + home institution + German host university",
       "short": "Nomination and admission",
       "sources": [
         "S7"
       ],
       "purpose": "Keep the university application moving alongside APS preparation.",
       "actions": [
-        "WeSchool selects and nominates candidates. After nomination, watch for the application link emailed by Bamberg's International Office; check spam as well as your inbox.",
-        "Open the university link and follow the current HISinOne exchange application instructions. Prepare the requested forms and photograph and submit them by the deadline given for your semester.",
-        "Review your name and passport details against your identity documents. Check that you selected the exchange semester and programme corresponding to your nomination.",
-        "Monitor the application platform and your registered email for missing items. After review, download and retain the official Bamberg admission letter from the platform."
+        "Your home institution selects and nominates candidates. Ask the German host university’s international office how nominated exchange students apply, which portal or invitation to use, and whether a nomination reference is needed.",
+        "Follow the host university’s current exchange instructions. Confirm required documents, course selection, language evidence, application method and deadlines for your intended semester. These vary by university and programme.",
+        "Submit the host exchange application by its deadline and keep the confirmation. Use the exchange procedure supplied by the host, rather than assuming that a degree-admission portal or uni-assist applies.",
+        "Monitor the host application portal and your registered email for missing items. After review, retain the official admission or acceptance letter in the format issued by the host university."
       ],
-      "check": "The public Bamberg page currently lists 15 May for winter-semester applications and 1 December for summer-semester applications. Recheck it and your invitation for the relevant year; WeSchool may set an earlier internal deadline.",
+      "check": "Obtain the nomination and application deadlines for your host university, intended semester and current year. Your home institution may set an earlier internal deadline. No date in another university’s guide applies automatically.",
       "complete": "You have submitted the exchange application and recorded its status. Retain the admission letter when issued.",
-      "branch": "If no invitation arrives after nomination, ask WeSchool to confirm nomination and contact Bamberg using its official exchange channels. Do not create an unrelated degree application."
+      "branch": "If no invitation or application instructions arrive after nomination, ask your home institution to confirm nomination and contact the German host university through its official exchange channels."
     },
     {
       "n": 4,
       "title": "Obtain the institutional group instructions",
-      "owner": "WeSchool + Bamberg + APS",
+      "owner": "Home institution + German host university + APS",
       "short": "Group number assigned",
       "sources": [
         "S1"
@@ -104,7 +105,7 @@
       "purpose": "Build a complete packet using the exchange checklist rather than the individual graduate checklist.",
       "actions": [
         "Open the APS checklists page and download Process A and the current Student Authorisation Letter. Check that your cohort has not received newer written instructions from APS.",
-        "Collect the common documents in the document checklist. Obtain the original enrolment statement from WeSchool and ask the coordinator which academic category applies to your PGDM.",
+        "Collect the common documents in the document checklist. Obtain the original enrolment statement from your home institution and ask the coordinator which academic category applies to your qualification.",
         "For a confirmed postgraduate/master category, prepare your bachelor's certificate, every bachelor semester marksheet and all available current university marksheets. For a confirmed bachelor category, prepare the Class XII certificate and all bachelor marksheets to date.",
         "Keep your Class X and XII details available for the public form even where a particular certificate is not listed in the Process A postgraduate packet. Distinguish information needed to fill a field from documents required in the submitted packet.",
         "The signed application and payment receipt become available later. Track them as pending items rather than declaring the packet complete prematurely."
@@ -116,7 +117,7 @@
     {
       "n": 6,
       "title": "Check every document against the form",
-      "owner": "Student + WeSchool",
+      "owner": "Student + Home institution",
       "short": "Quality check passed",
       "sources": [
         "S1",
@@ -203,7 +204,7 @@
     {
       "n": 10,
       "title": "Complete the coordinated group payment",
-      "owner": "WeSchool or designated group payer",
+      "owner": "Home institution or designated group payer",
       "short": "Collective fee credited",
       "sources": [
         "S1",
@@ -225,7 +226,7 @@
     {
       "n": 11,
       "title": "Hand over the packet for collective submission",
-      "owner": "Student + WeSchool or Bamberg",
+      "owner": "Student + Home institution or German host university",
       "short": "Group packet dispatched",
       "sources": [
         "S1",
@@ -246,8 +247,8 @@
     {
       "n": 12,
       "title": "Follow verification and hand over to visa preparation",
-      "owner": "APS + Bamberg + Student",
-      "short": "Result confirmed by Bamberg",
+      "owner": "APS + German host university + Student",
+      "short": "Host confirms the result",
       "sources": [
         "S1",
         "S4",
@@ -258,11 +259,11 @@
         "Monitor your registered email and coordinate with the international office. If APS requests additional records, provide the exact requested items through the specified channel and retain the request and response.",
         "If an institution has not responded to verification, ask its examinations/records office to respond through an official institutional channel. APS says private email confirmations cannot replace official institutional verification.",
         "Treat the university coordinator as the primary group contact. An account status or courier delivery alone is not proof of a successful Process A outcome. There is no guaranteed group turnaround date in the leaflet.",
-        "For Process A, APS emails the result to the concerned German university; applicants do not receive an individual APS certificate. Ask Bamberg to confirm your outcome and tell you what group verification or exemption evidence to use for the visa process.",
+        "For Process A, APS emails the result to the concerned German university; applicants do not receive an individual APS certificate. Ask the German host university to confirm your outcome and tell you what group verification or exemption evidence to use for the visa process.",
         "Retain the admission letter, verified cohort instructions, relevant result/exemption confirmation and your references. Open the current German Missions visa guidance and follow the route for your circumstances. Admission, finance, insurance and other visa requirements must be checked separately."
       ],
       "check": "Do not wait for an individual digital APS PDF on the group route. APS verification does not guarantee a visa. Process A is tied to the exchange; changes to the German university/programme require the applicable institutional and APS instructions.",
-      "complete": "Bamberg has confirmed the relevant result or the universities have confirmed the exemption path, and you know what evidence to use for visa preparation.",
+      "complete": "The German host university has confirmed the relevant result or the universities have confirmed the exemption path, and you know what evidence to use for visa preparation.",
       "branch": "Additional documents requested: return to collection and review, then respond. No result near your deadline: escalate through the coordinator with references and dates; avoid repeated duplicate enquiries."
     }
   ],
@@ -348,7 +349,7 @@
       "name": "Current university marksheets",
       "who": "Confirmed master/postgraduate category",
       "format": "Copies of all available university marksheets",
-      "detail": "Include records of the current programme as applicable. For PGDM, confirm the category and required current-study records with WeSchool/APS.",
+      "detail": "Include records of the current programme as applicable. For PGDM, confirm the category and required current-study records with your home institution or APS.",
       "source": "S1"
     },
     {
@@ -405,8 +406,8 @@
     {
       "title": "Language Details",
       "fields": "Language chosen; English certification and result; German certification, level and score",
-      "how": "Use genuine certificates and exact scores/levels where applicable. The public form lists English and German certificate fields. APS does not set a specific language level for verification; Bamberg and the visa authority set their own requirements.",
-      "watch": "Do not manufacture an IELTS, TOEFL or German result or assume that a blank APS language section waives Bamberg/visa requirements. Ask about any mandatory field that does not apply.",
+      "how": "Use genuine certificates and exact scores/levels where applicable. The public form lists English and German certificate fields. APS does not set a specific language level for verification; the German host university and the visa authority set their own requirements.",
+      "watch": "Do not manufacture an IELTS, TOEFL or German result or assume that a blank APS language section waives host-university or visa requirements. Ask about any mandatory field that does not apply.",
       "source": "S3, S4"
     },
     {
@@ -421,7 +422,7 @@
   "trouble": [
     [
       "Route or exemption unclear",
-      "Ask WeSchool and Bamberg to confirm the route and evidence in writing. Keep preparing records, but pause APS registration/payment. Visa certificate exemptions and institutional verification requirements must be checked separately.",
+      "Ask your home institution and the German host university to confirm the route and evidence in writing. Keep preparing records, but pause APS registration/payment. Visa certificate exemptions and institutional verification requirements must be checked separately.",
       "S1, S8"
     ],
     [
@@ -461,21 +462,21 @@
     ],
     [
       "No individual APS PDF arrives",
-      "For Process A this is expected: APS informs the German university. Ask Bamberg to confirm your result and the evidence to use for visa preparation.",
+      "For Process A this is expected: APS informs the German university. Ask the German host university to confirm your result and the evidence to use for visa preparation.",
       "S1"
     ],
     [
       "Programme or host university changes",
-      "Inform WeSchool and Bamberg before taking further steps. The Process A leaflet limits the route to the exchange and gives conditions for changes; obtain case-specific instructions.",
+      "Inform your home institution and the German host university before taking further steps. The Process A leaflet limits the route to the exchange and gives conditions for changes; obtain case-specific instructions.",
       "S1"
     ]
   ],
   "cohort": [
     "Cohort and exchange semester",
     "Confirmed procedure or exemption and evidence",
-    "PGDM eligibility and form-entry instructions",
-    "WeSchool coordinator and official contact",
-    "Bamberg coordinator and official contact",
+    "Academic category, eligibility and form-entry instructions",
+    "Home-institution coordinator and official contact",
+    "German host-university coordinator and official contact",
     "APS group number if applicable",
     "Student registration instructions and target date",
     "Student document handover deadline",
@@ -484,7 +485,7 @@
     "Collective transfer reference and receipt location",
     "Dispatching office and dispatch target date",
     "Courier tracking and delivery evidence location",
-    "Bamberg result confirmation and visa evidence",
+    "Host-university result confirmation and visa evidence",
     "Guide reviewer and next review date"
   ],
   "handover": [
@@ -504,7 +505,7 @@
   "review": [
     "Before each new cohort, the international office should recheck the live checklist links, leaflet version, fee, bank instructions, registration fields, mailing address, exemptions and visa guidance. Replace dates and contacts using current institutional instructions.",
     "The Process A leaflet checked here is dated 28 November 2023 and was still linked by APS on the verification date. The newer general form/FAQ does not resolve every group-specific detail. Route-specific instructions govern the Process A description; any newer written direction from APS for the cohort must be reconciled by the institutions.",
-    "The institutional route confirmation, PGDM classification and group payment interface are real coordinator checkpoints. This guide is not an assertion that APS has approved a particular WeSchool batch. The checklists describe completion of preparation; checking a box is not proof of submission or APS approval.",
+    "The institutional route confirmation, academic classification and group payment interface are real coordinator checkpoints. This guide is not an assertion that APS has approved a particular cohort. The checklists describe completion of preparation; checking a box is not proof of submission or APS approval.",
     "This edition verified public pages only. It did not create an account, pay a fee, submit documents or inspect authenticated screens. Instructions beyond the public form describe the official process and tell students what evidence to retain, rather than inventing post-login buttons."
   ],
   "sources": [
@@ -546,9 +547,9 @@
     },
     {
       "id": "S7",
-      "title": "Bamberg exchange application instructions",
-      "url": "https://www.uni-bamberg.de/en/studies/exchange-students-eg-erasmus/how-do-i-apply/",
-      "note": "Home institution selection and nomination, emailed application link, exchange application and admission letter."
+      "title": "DAAD application guidance and university contacts",
+      "url": "https://www.daad.de/en/studying-in-germany/requirements/application-process/",
+      "note": "General background on German university applications and contacting international offices; this is not a universal exchange application procedure. Your German host university provides the actual exchange portal, nomination rules, document list and deadlines."
     },
     {
       "id": "S8",
