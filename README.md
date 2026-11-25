@@ -45,4 +45,6 @@ Website and print credits name Tanmay Narnaware. Both downloadable PDFs carry th
 
 ## Keep the print map in sync
 
-After editing `app/flow-model.js`, run `python3 scripts/build-flowchart-pdfs.py` with Node on PATH and the ReportLab/pypdf packages available. This creates the vector one-page map and replaces only page 2 of the SOP. Both PDFs include clickable links to full step instructions. The normal build and checks compare a graph fingerprint in both PDFs with the website model and refuse to publish a stale PDF. Versioned PDF links avoid reusing older cached downloads.
+After editing `app/flow-model.js`, run `python3 scripts/build-flowchart-pdfs.py` with Node on PATH and the ReportLab/pypdf packages available. This creates the vector one-page map and replaces only page 2 of the SOP. Both PDFs include clickable links to full step instructions. The normal build and checks compare a graph fingerprint in both PDFs with the website model and refuse to publish a stale PDF. After generating the PDFs, run `python3 scripts/update-word-guide.py` with python-docx, Pillow and Poppler available, then render the Word file for layout review. All three downloads carry the same graph fingerprint; the build also verifies the Word artifact hash. Versioned download links avoid reusing older cached files.
+
+The editable Word copy includes the current map as a high-resolution inline figure, Tanmay Narnaware on the cover and page footers, and the same author metadata. Its instructions and tables are preserved.

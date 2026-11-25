@@ -38,7 +38,7 @@ const pages=[
 ];
 const files=[
   {title:'PDF SOP',detail:'The complete 19-page student SOP, ready to print or share.',file:'APS_Exchange_Student_SOP.pdf?v=flow-map-2',label:'Download PDF SOP',type:'PDF · 19 pages'},
-  {title:'Editable Word document',detail:'An editable copy for your international office and future cohorts.',file:'APS_Exchange_Student_SOP.docx',label:'Download Word document',type:'DOCX · Editable'},
+  {title:'Editable Word document',detail:'An editable copy for your international office and future cohorts.',file:'APS_Exchange_Student_SOP.docx?v=flow-map-2-credit',label:'Download Word document',type:'DOCX · Editable'},
   {title:'One-page flowchart',detail:'The responsibilities and complete Process A journey at a glance.',file:'APS_Exchange_Flowchart.pdf?v=flow-map-2',label:'Download one-page flowchart',type:'PDF · 1 page'},
 ];
 const DownloadAnchor=forwardRef(function DownloadAnchor(props,ref){return <a {...props} ref={ref} download />;});
