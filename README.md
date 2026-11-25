@@ -30,3 +30,15 @@ Public sources were verified on 24 November 2026. Cohort eligibility, PGDM class
 The overview has an illustrated three-chapter explorer, a route-aware next-action helper using the student’s saved checklist ticks, and three practice scenarios with immediate explanations. Run `npm run check` for suggestion branches and route gates. Route choices and practice answers are session-only; the existing checklist storage key is preserved.
 
 The three illustrations are AI-generated educational artwork, not photographs of a campus, official documents or real applicants. They were made with the built-in image generator after the requested Higgsfield generation was rejected because the connected account requires Basic or higher. Their prompts and provenance are in `app/media/illustration-prompts.json`.
+
+## Animated journey map
+
+`#flowchart` opens the focused map. The overview embeds the same component. SVG tiles use perspective and extruded surfaces for depth, with a flat-view toggle, zoom controls, keyboard navigation and a phone-friendly step list. The guided walkthrough advances every five seconds only after Play is pressed. Manual selection, pausing motion, reduced motion and hiding the browser tab stop playback.
+
+The graph keeps the confirmed exemption exit, parallel university tasks and the additional-records return loop explicit. It is a preparation guide and reading order, not an application status or processing timeline. `npm run check` also validates these branches and the walkthrough boundary.
+
+## Appearance, quick tour and credits
+
+The sun/moon action switches the full Astryx theme, including the navbar, sidebar, controls and map. The preference uses `aps-guide-appearance-v1`, separate from checklist storage. Quick tour offers six short explanations with Back, Next, Finish and Show me actions; it is available in the navbar and overview.
+
+Website and print credits name Tanmay Narnaware. Both downloadable PDFs carry the same footer credit on every page and in author metadata. Their original page counts, instructions, sources and diagrams are retained.

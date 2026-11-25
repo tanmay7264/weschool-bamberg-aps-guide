@@ -11,7 +11,6 @@ html,body,#root{height:100%;margin:0;font-family:var(--font-family-body)}
 .illustration-figure img{display:block;width:100%;height:auto;border-radius:var(--radius-container)}
 .hero-art img{aspect-ratio:3/2;object-fit:cover}
 .suggestion-result{border-inline-start:var(--spacing-1) solid var(--color-text-accent);padding-inline-start:var(--spacing-4)}
-.explorer-detail{justify-content:center;min-width:0}
 .step-preview{animation:preview-in .25s ease-out}
 .practice-feedback{border-block-start:var(--border-width) solid var(--color-border);padding-block-start:var(--spacing-4)}
 @keyframes preview-in{from{opacity:.45;transform:translateY(.3rem)}to{opacity:1;transform:translateY(0)}}
@@ -29,7 +28,7 @@ html,body,#root{height:100%;margin:0;font-family:var(--font-family-body)}
 @media(max-width:48rem){.desktop-label{display:none}.flowchart svg{min-width:48rem}}
 @media print{
  @page{size:letter;margin:16mm}
- html,body,#root{height:auto!important;overflow:visible!important;background:var(--color-background-surface)}
+ html,body,#root{color-scheme:light!important;height:auto!important;overflow:visible!important;background:var(--color-background-surface)}
  .screen-shell{display:none!important}.print-only{display:flex!important;padding:0!important}
  .print-step{break-before:page}.print-only h1,.print-only h2,.print-only h3{break-after:avoid}
  .print-only p,.print-only li{orphans:3;widows:3}.print-only a{overflow-wrap:anywhere}

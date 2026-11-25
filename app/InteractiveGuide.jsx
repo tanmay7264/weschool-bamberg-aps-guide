@@ -9,9 +9,8 @@ import {Icon} from '@astryxdesign/core/Icon';
 import {Selector} from '@astryxdesign/core/Selector';
 import {RadioList,RadioListItem} from '@astryxdesign/core/RadioList';
 import {Collapsible} from '@astryxdesign/core/Collapsible';
-import {ProgressBar} from '@astryxdesign/core/ProgressBar';
 import {Link} from '@astryxdesign/core/Link';
-import {ArrowRightIcon,CheckCircleIcon,SparklesIcon,LightBulbIcon} from '@heroicons/react/24/outline';
+import {ArrowRightIcon,SparklesIcon,LightBulbIcon} from '@heroicons/react/24/outline';
 import data from './content.json';
 import {suggestNext,taskOptions,practiceQuestions} from './suggestions.js';
 import journeyImage from './media/bamberg-journey.webp';
@@ -25,15 +24,15 @@ const phases=[
   {title:'Submit & follow through',short:'Follow through',steps:[10,11,12],image:journeyImage,alt:'Illustration of Indian exchange students in a Bavarian riverside town',tip:'Keep payment, delivery and result evidence together so the coordinator can resolve follow-ups.'},
 ];
 
-export function HeroIntro({checks,openStep,navigate}) {
+export function HeroIntro({checks,openStep,navigate,onTour}) {
   const done=data.stages.filter(s=>checks['step-'+s.n]===true).length;
   return <Grid columns={{minWidth:300,max:2}} gap={6} className="hero-grid">
     <VStack gap={4} className="hero-copy">
       <Text type="label" color="accent" className="eyebrow">WESCHOOL → BAMBERG</Text>
       <Heading level={1} type="display-3" id="page-title">Your exchange.<br/>One clear next step.</Heading>
       <P type="large" color="secondary">A little preparation today. A new chapter in Germany tomorrow. Explore your APS journey, find your next action, and keep everything in order.</P>
-      <HStack gap={3} wrap="wrap"><Button variant="primary" label={done?'Continue my journey':'Explore my journey'} onClick={()=>openStep(data.stages.find(s=>!checks['step-'+s.n])?.n||12)} endContent={<Icon icon={ArrowRightIcon}/>} /><Button label="Save the SOP" onClick={()=>navigate('downloads')} /></HStack>
-      <HStack gap={4} wrap="wrap"><Text type="supporting" color="secondary">12 guided steps</Text><Text type="supporting" color="secondary">13 document checks</Text><Text type="supporting" color="secondary">Made for future cohorts</Text></HStack>
+      <HStack gap={3} wrap="wrap"><Button variant="primary" label="Explore the 3D flowchart" onClick={()=>navigate('flowchart')} endContent={<Icon icon={ArrowRightIcon}/>} /><Button label={done?'Continue my preparation':'Start with step 1'} onClick={()=>openStep(data.stages.find(s=>!checks['step-'+s.n])?.n||12)} /></HStack>
+      <HStack><Button label="Take the quick tour" variant="ghost" onClick={onTour}/></HStack><HStack gap={4} wrap="wrap"><Text type="supporting" color="secondary">12 guided steps</Text><Text type="supporting" color="secondary">13 document checks</Text><Text type="supporting" color="secondary">Made for future cohorts</Text></HStack>
     </VStack>
     <VStack as="figure" gap={2} className="illustration-figure hero-art"><img src={journeyImage} alt="Paper-cut illustration of Indian students exploring a Bamberg-inspired riverside town" width="1280" height="853" fetchPriority="high"/><Text as="figcaption" type="supporting" color="secondary">Your next chapter, illustrated. Artwork is illustrative, not a campus photograph.</Text></VStack>
   </Grid>;
@@ -52,24 +51,6 @@ export function NextActionHelper({checks,routeChoice,onRouteChange,navigate,open
     <Collapsible trigger={<Text weight="semibold">Confirm your route first · why it matters</Text>} defaultIsOpen={false}><VStack gap={4} paddingBlock={4}>{data.gate.map(t=><P key={t}>{t}</P>)}<HStack gap={4} wrap="wrap">{data.sources.filter(s=>['S1','S8'].includes(s.id)).map(s=><Link key={s.id} href={s.url} isExternalLink>{s.id} {s.title}</Link>)}</HStack></VStack></Collapsible>
     <P type="supporting" color="secondary">Suggestions follow your choices and saved ticks. Your institutions confirm the route; checklist completion does not confirm APS approval.</P>
   </VStack></Card>;
-}
-
-export function JourneyExplorer({checks,openStep,diagram}) {
-  const [phaseIndex,setPhaseIndex]=useState(0),[selected,setSelected]=useState(1);
-  const phase=phases[phaseIndex],stage=data.stages[selected-1];
-  function choosePhase(index){setPhaseIndex(index);setSelected(phases[index].steps.find(n=>checks['step-'+n]!==true)||phases[index].steps[0]);}
-  return <VStack gap={5} as="section" aria-labelledby="explorer-title">
-    <VStack gap={2}><Text type="label" color="accent" className="eyebrow">THE BIG PICTURE</Text><Heading level={2} id="explorer-title">Explore the journey</Heading><P color="secondary">Choose a chapter, then tap a step. See who helps and what comes next.</P></VStack>
-    <Grid columns={{minWidth:220,max:3}} gap={3}>{phases.map((p,i)=>{const done=p.steps.filter(n=>checks['step-'+n]===true).length;return <Button key={p.title} label={`${i+1}. ${p.title}`} variant={i===phaseIndex?'primary':'secondary'} aria-pressed={i===phaseIndex} onClick={()=>choosePhase(i)} endContent={done===p.steps.length?<Icon icon={CheckCircleIcon}/>:undefined}/>;})}</Grid>
-    <Card padding={0}><Grid columns={{minWidth:280,max:2}} gap={0}>
-      <VStack gap={3} padding={5}><VStack as="figure" gap={2} className="illustration-figure"><img src={phase.image} alt={phase.alt} width="1280" height={phaseIndex===0?'720':'853'} loading="lazy"/><Text as="figcaption" type="supporting" color="secondary">Illustrative artwork · Chapter {phaseIndex+1} of 3</Text></VStack><ProgressBar label={`${phase.short} chapter preparation`} value={phase.steps.filter(n=>checks['step-'+n]===true).length} max={phase.steps.length} hasValueLabel formatValueLabel={(v,m)=>`${v} of ${m} steps`}/></VStack>
-      <VStack gap={4} padding={6} className="explorer-detail"><HStack gap={2} wrap="wrap" aria-label="Explore chapter steps">{phase.steps.map(n=><Button key={n} label={`Step ${String(n).padStart(2,'0')}`} size="sm" variant={n===selected?'primary':'secondary'} aria-pressed={n===selected} onClick={()=>setSelected(n)} icon={checks['step-'+n]===true?<Icon icon={CheckCircleIcon}/>:undefined}/>)}</HStack>
-        <VStack key={selected} gap={3} className="step-preview" aria-live="polite"><Text type="label" color="accent">{String(selected).padStart(2,'0')} / 12 · {stage.owner}</Text><Heading level={3}>{stage.title}</Heading><P>{stage.purpose}</P><P type="supporting" color="secondary"><Text weight="semibold">Ready when: </Text>{stage.complete}</P></VStack>
-        <HStack><Button label={`Open full step ${selected}`} variant="primary" onClick={()=>openStep(selected)} endContent={<Icon icon={ArrowRightIcon}/>} /></HStack>
-      </VStack>
-    </Grid></Card>
-    <Collapsible trigger={<Text weight="semibold">See the complete responsibility flowchart</Text>} defaultIsOpen={false}><VStack paddingBlock={4}>{diagram}</VStack></Collapsible>
-  </VStack>;
 }
 
 export function ReadinessCheck({openStep}) {
