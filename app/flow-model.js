@@ -17,7 +17,7 @@ export const flowNodes=[
 export const flowEdges=[
   {from:1,to:2,d:'M254 210H294'},
   {from:2,to:3,d:'M514 210H554'},
-  {from:2,to:4,d:'M404 266V292Q404 302 414 302H914Q924 302 924 292V266',parallel:true},
+  {from:2,to:4,d:'M404 266V292Q404 302 414 302H914Q924 302 924 292V278',parallel:true},
   {from:3,to:5,d:'M664 266V320Q664 332 676 332H1070Q1092 332 1092 354V420Q1092 442 1070 442H1034',parallel:true},
   {from:4,to:5,d:'M1034 210H1070Q1108 210 1108 248V420Q1108 442 1070 442H1034',parallel:true},
   {from:5,to:6,d:'M814 442H774'},

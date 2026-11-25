@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "build": "vite build && node scripts/publish-build.mjs",
+    "build": "node scripts/check-pdf-model.mjs && vite build && node scripts/publish-build.mjs",
     "astryx": "node node_modules/@astryxdesign/cli/clients/cli/bin/astryx.mjs",
-    "check": "node scripts/check-suggestions.mjs && node scripts/check-flow.mjs"
+    "check": "node scripts/check-suggestions.mjs && node scripts/check-flow.mjs && node scripts/check-pdf-model.mjs"
   },
   "dependencies": {
     "@astryxdesign/core": "0.7.17",

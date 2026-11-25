@@ -41,4 +41,8 @@ The graph keeps the confirmed exemption exit, parallel university tasks and the 
 
 The sun/moon action switches the full Astryx theme, including the navbar, sidebar, controls and map. The preference uses `aps-guide-appearance-v1`, separate from checklist storage. Quick tour offers six short explanations with Back, Next, Finish and Show me actions; it is available in the navbar and overview.
 
-Website and print credits name Tanmay Narnaware. Both downloadable PDFs carry the same footer credit on every page and in author metadata. Their original page counts, instructions, sources and diagrams are retained.
+Website and print credits name Tanmay Narnaware. Both downloadable PDFs carry the same footer credit on every page and in author metadata. The original page counts, instructions and sources are retained. The standalone map and SOP page 2 now use the same graph as the website.
+
+## Keep the print map in sync
+
+After editing `app/flow-model.js`, run `python3 scripts/build-flowchart-pdfs.py` with Node on PATH and the ReportLab/pypdf packages available. This creates the vector one-page map and replaces only page 2 of the SOP. Both PDFs include clickable links to full step instructions. The normal build and checks compare a graph fingerprint in both PDFs with the website model and refuse to publish a stale PDF. Versioned PDF links avoid reusing older cached downloads.
